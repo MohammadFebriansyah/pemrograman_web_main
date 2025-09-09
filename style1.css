@@ -5,27 +5,94 @@ html, body{
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ddd;
     line-height: 1.65;
-    padding-bottom: 100px;
+    background: url('img/bg.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
 .container-satu{
-    width: 800px;
-    margin: 50px auto;
+    width: 900px;
+    max-width: 100%;
     background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.40);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .sidebar-satu{
     flex: 1;
     order: 1;
 }
+
 .kolom-utama{
-    flex: 3;
+    flex: 2;
     order: 2;
+    text-align: justify;
 }
+
 .sidebar-dua{
     flex: 1;
     order: 3;
+    text-align: justify;
+}
+
+.sidebar-satu h3, .sidebar-dua h3 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sidebar-satu ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.sidebar-satu li {
+    margin-bottom: 8px;
+}
+
+.sidebar-satu a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.kolom-utama h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .container-satu {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .sidebar-satu {
+        order: 1;
+    }
+    
+    .kolom-utama {
+        order: 2;
+    }
+    
+    .sidebar-dua {
+        order: 3;
+    }
 }
