@@ -1,8 +1,5 @@
 <?php
-function tampilkanHaloDunia(){
-    echo "Hallo Dunia <br>";
-
-    tampilkanHaloDunia();
+for ($i=1; $i <= 25; $i++){
+    echo "Perulangan ke-{$i} <br>";
 }
-tampilkanHaloDunia();
 ?>
