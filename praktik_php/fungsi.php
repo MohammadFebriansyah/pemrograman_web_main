@@ -1,10 +1,16 @@
-<?php // SOAL 4
-function perkenalan(){
-    echo "Assalamualaikum, ";
-    echo "Perkenalkan, nama saya Febri<br/>"; 
-    echo "Senang berkenalan dengan anda<br/>";
+<?php
+function perkenalan ($nama, $salam) {
+    echo $salam.", ";
+    echo "Perkenalkan, nama saya ".$nama."<br/>";
+    echo "Senang berkenalan dengan Anda<br/>";
 }
-    perkenalan();
-    perkenalan()
-?>
+ 
+perkenalan ("Ansyah", "Hallo");
 
+echo "<hr>";
+
+$saya = "Febri";
+$ucapanSalam = "Selamat pagi";
+
+perkenalan ($saya, $ucapanSalam);
+?>
