@@ -1,10 +1,10 @@
-<?php
-function perkenalan ($nama, $salam) {
+<?php 
+function perkenalan ($nama, $salam="Assalamualaikum") {
     echo $salam.", ";
     echo "Perkenalkan, nama saya ".$nama."<br/>";
     echo "Senang berkenalan dengan Anda<br/>";
 }
- 
+
 perkenalan ("Ansyah", "Hallo");
 
 echo "<hr>";
@@ -12,5 +12,5 @@ echo "<hr>";
 $saya = "Febri";
 $ucapanSalam = "Selamat pagi";
 
-perkenalan ($saya, $ucapanSalam);
+perkenalan ($saya);
 ?>
