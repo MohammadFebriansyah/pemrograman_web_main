@@ -50,3 +50,13 @@ if (preg_match($pattern, $text, $matches)) {
 }
 echo "<br>";
 ?>
+
+<?php // soal 5.6
+$pattern = '/go{1,2}d/'; // Cocokkan "good" atau "good" (2 huruf "o" maksimal).
+$text = 'god is good.';
+if (preg_match($pattern, $text, $matches)) { 
+    echo "Cocokkan: " . $matches[0];
+} else {
+    echo "Tidak ada yang cocok!";
+}
+?>
