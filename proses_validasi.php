@@ -16,10 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!empty($errors)) {
         foreach ($errors as $error) {
-            echo $error . "<br>";
+            echo "<span style='color:red;'>$error</span><br>";
         }
     } else {
-        echo "Data berhasil dikirim: Nama = $nama, Email = $email";
+        echo "<span style='color:green;'>Data berhasil dikirim: Nama = $nama, Email = $email</span>";
     }
 }
 ?>
