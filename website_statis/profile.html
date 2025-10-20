@@ -73,7 +73,7 @@
   <body>
     <header class="navigasi">
       <h1>Profile Saya</h1>
-      <a href="index.html">Blog Saya</a>
+      <a href="index.php">Blog Saya</a>
     </header>
     <div class="main">
       <div class="card">
@@ -87,18 +87,44 @@
     <footer>
       <p>&copy; 2025 Mohammad Febriansyah</p>
     </footer>
-    <script src="jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".card").hide().fadeIn(1300);
-        $(".card p")
-          .hide()
-          .each(function (index) {
-            $(this)
-              .delay(300 * index)
-              .slideDown(500);
-          });
+     <script>
+      // ← diubah ke JavaScript murni
+      document.addEventListener("DOMContentLoaded", function () {
+        const card = document.querySelector(".card");
+        const paragraphs = document.querySelectorAll(".card p");
+
+        // Fade in card
+        card.style.opacity = 0;
+        card.style.transition = "opacity 1.3s";
+        requestAnimationFrame(() => {
+          card.style.opacity = 1;
+        });
+
+        // Slide down setiap paragraf dengan delay
+        paragraphs.forEach((p, index) => {
+          p.style.display = "none";
+          setTimeout(() => {
+            p.style.display = "block";
+            p.style.animation = "slideDown 0.5s forwards";
+          }, 300 * index);
+        });
       });
+
+      // ← tambahkan animasi slideDown
+      const style = document.createElement("style");
+      style.innerHTML = `
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `;
+      document.head.appendChild(style);
     </script>
   </body>
 </html>
