@@ -10,6 +10,7 @@
     if (in_array($fileType, $allowedExtensions) && $_FILES["myfile"]["size"] <= $maxSize) { 
         if (move_uploaded_file($_FILES["myfile"]["tmp_name"], $targetFile)) { 
             echo "File berhasil diunggah.";
+            echo '<br><br><img src="' . $targetFile . '" width="200" alt="Thumnail">';
         } else {
             echo "Gagal mengunggah file.";
         }
