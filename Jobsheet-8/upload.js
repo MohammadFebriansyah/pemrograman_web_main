@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#upload-form').submit(function(e){ 
+    $('#upload-form').submit(function(e){
         e.preventDefault();
 
         var formData = new FormData(this);
@@ -11,7 +11,7 @@ $(document).ready(function(){
             cache: false,
             contentType: false,
             processData: false,
-            success: function(response){ 
+            success: function(response){
                 $('#status').html(response);
             },
             error: function(){
