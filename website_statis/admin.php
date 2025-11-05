@@ -137,8 +137,8 @@
 <body>
     <header>
         <h1>Admint</h1>
-        <a href="index.html" class="user-page-link">User Page</a>
-        <a href="profile.html" class="profile-link">Profile Saya</a>
+        <a href="index.php" class="user-page-link">User Page</a>
+        <a href="profile.php" class="profile-link">Profile Saya</a>
     </header>
 
     <div class="hero">

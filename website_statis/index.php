@@ -137,7 +137,8 @@
 <body>
   <header>
     <h1>Blog Saya</h1>
-    <a href="profile.html" class="profile-link">Profile Saya</a>
+    <a href="admin.php" class="admin-page-link">Admin Page</a>
+    <a href="profile.php" class="profile-link">Profile Saya</a>
   </header>
 
   <div class="hero">
@@ -146,7 +147,7 @@
   </div>
 
   <div class="container">
-    <h2 style="color: #132440; margin-bottom: 10px">Artikel Terbaru</h2>
+    <!-- <h2 style="color: #132440; margin-bottom: 10px">Artikel Terbaru</h2> -->
     <div class="articles-grid">
       <?php
       include 'koneksi.php';
